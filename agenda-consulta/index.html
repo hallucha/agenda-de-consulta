@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Consulta Médica</title>
+    <link rel="stylesheet" href="formulario_consulta.html">
+    <link rel="stylesheet" href="/css/estilo.css">
+    <script type="text/javascript" src="./index.js" defer=""></script>
+    <link rel="stylesheet" href="./index.css">
+  </head>
+
+  <body>
+    <h1>Formulário de Consulta Médica</h1>
+    <form action="/enviar_consulta" method="post">
+      <label for="data">Data:</label>
+      <input type="date" id="data" name="data" required=""><br>
+
+      <label for="hora">Hora:</label>
+      <input type="time" id="hora" name="hora" required=""><br>
+
+      <label for="paciente">Paciente:</label>
+      <input type="text" id="paciente" name="paciente" required=""><br>
+
+      <label>Gênero:</label>
+      <input type="radio" id="genero_m" name="genero" value="M" required="">
+      <label for="genero_m">Masculino</label>
+      <input type="radio" id="genero_f" name="genero" value="F" required="">
+      <label for="genero_f">Feminino</label><br>
+
+      <label for="data_nascimento">Data de Nascimento:</label>
+      <input type="date" id="data_nascimento" name="data_nascimento" required=""><br>
+
+      <label>Pagamento:</label>
+      <select name="pagamento" required="">
+        <option value="convenio">Convênio</option>
+        <option value="particular">Particular</option>
+      </select><br>
+
+      <label for="queixas">Queixas (até 4 linhas):</label><br>
+      <textarea id="queixas" name="queixas" rows="4" maxlength="200"></textarea><br>
+
+      <label for="diagnostico">Diagnóstico (até 4 linhas):</label><br>
+      <textarea id="diagnostico" name="diagnostico" rows="4" maxlength="200"></textarea><br>
+
+      <label>Atestado:</label>
+      <input type="radio" id="atestado_sim" name="atestado" value="sim" required="">
+      <label for="atestado_sim">Sim</label>
+      <input type="radio" id="atestado_nao" name="atestado" value="nao" required="">
+      <label for="atestado_nao">Não</label><br>
+
+      <label>Exames:</label>
+      <input type="checkbox" id="exame_sangue" name="exames" value="sangue">
+      <label for="exame_sangue">Hemograma</label>
+      <input type="checkbox" id="exame_rx" name="exames" value="rx">
+      <label for="exame_rx">Raio-X</label>
+      <input type="checkbox" id="exame_doppler" name="exames" value="doppler">
+      <label for="exame_doppler">Doppler</label>
+      <input type="checkbox" id="exame_rm" name="exames" value="rm">
+      <label for="exame_rm">RM</label><br>
+
+      <label for="data_proxima_consulta">Data da Próxima Consulta:</label>
+      <input type="date" id="data_proxima_consulta" name="data_proxima_consulta"><br>
+
+      <input type="submit" value="Enviar">
+    </form>
+
+  </body>
+
+</html>
